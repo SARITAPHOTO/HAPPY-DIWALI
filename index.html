@@ -21,7 +21,9 @@ h1 span{display:block;font-size:.42em;letter-spacing:7px;margin-top:18px;color:#
 .buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
 button{border:1px solid #ffdc91;background:linear-gradient(135deg,#ffdf8d,#f6a42c);color:#35133a;border-radius:999px;padding:13px 23px;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 0 20px #ffb12a44;transition:.25s}
 button:hover{transform:translateY(-3px);box-shadow:0 0 30px #ffb12a88}
-button.secondary{background:#ffffff0d;color:#ffe7a8;border-color:#e6bd6c}\nbutton.whatsapp{background:linear-gradient(135deg,#39df85,#12a85a);color:#052b17;border-color:#8affbc;box-shadow:0 0 22px #25d36655}\n.reply-note{font:12px Arial,sans-serif;color:#e9d8ff;margin-top:12px;opacity:.85}
+button.secondary{background:#ffffff0d;color:#ffe7a8;border-color:#e6bd6c}
+button.whatsapp{background:linear-gradient(135deg,#39df85,#12a85a);color:#052b17;border-color:#8affbc;box-shadow:0 0 22px #25d36655}
+.reply-note{font:12px Arial,sans-serif;color:#e9d8ff;margin-top:12px;opacity:.85}
 .diya{position:fixed;bottom:18px;font-size:40px;filter:drop-shadow(0 0 15px #ff9e22);animation:flicker 1.5s infinite alternate}
 .d1{left:8%}.d2{left:24%;font-size:30px;animation-delay:.3s}.d3{right:24%;font-size:30px;animation-delay:.6s}.d4{right:8%}
 @keyframes glow{from{text-shadow:0 0 10px #ffb52b,0 0 25px #f78a25,0 5px 25px #000}to{text-shadow:0 0 18px #fff0a8,0 0 55px #ff8a19,0 0 90px #e92e85}}
@@ -39,7 +41,8 @@ button.secondary{background:#ffffff0d;color:#ffe7a8;border-color:#e6bd6c}\nbutto
 <div class="signature">May your life shine brighter than ever ✨</div>
 <div class="buttons">
 <button id="fireworks">🎆 आतिशबाज़ी चलाएँ</button>
-<button class="secondary" id="share">💌 शुभकामनाएँ शेयर करें</button>\n<button class="whatsapp" id="reply">💬 हमें WhatsApp पर जवाब दें</button>
+<button class="secondary" id="share">💌 शुभकामनाएँ शेयर करें</button>
+<button class="whatsapp" id="reply">💬 हमें WhatsApp पर जवाब दें</button>
 </div>
 </main>
 <div class="diya d1">🪔</div><div class="diya d2">🪔</div><div class="diya d3">🪔</div><div class="diya d4">🪔</div>
@@ -51,7 +54,8 @@ function burst(x=Math.random()*innerWidth,y=Math.random()*innerHeight*.55){const
 function animate(){ctx.clearRect(0,0,innerWidth,innerHeight);particles=particles.filter(p=>p.life>0);for(const p of particles){p.x+=p.vx;p.y+=p.vy;p.vy+=.025;p.vx*=.99;p.life--;ctx.globalAlpha=Math.max(0,p.life/75);ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}ctx.globalAlpha=1;requestAnimationFrame(animate)}
 animate();setInterval(()=>burst(),1500);setTimeout(()=>burst(innerWidth*.5,innerHeight*.25),500);
 document.getElementById('fireworks').addEventListener('click',()=>{for(let i=0;i<5;i++)setTimeout(()=>burst(Math.random()*innerWidth,Math.random()*innerHeight*.55),i*180)});
-document.getElementById('reply').addEventListener('click',()=>{const msg='नमस्ते! मैंने आपकी Happy Diwali वेबसाइट देखी। मेरी तरफ से दीपावली की शुभकामनाएँ!';window.open('https://wa.me/919314711514?text='+encodeURIComponent(msg),'_blank','noopener');});\ndocument.getElementById('share').addEventListener('click',async()=>{const text='🪔 आपको और आपके परिवार को दीपावली की हार्दिक शुभकामनाएँ! आपका जीवन सुख, शांति और समृद्धि से जगमगाता रहे। ✨';if(navigator.share){try{await navigator.share({title:'Happy Diwali',text,url:location.href})}catch(e){}}else{try{await navigator.clipboard.writeText(text+' '+location.href);alert('शुभकामनाएँ कॉपी हो गईं! अब शेयर करें।')}catch(e){prompt('शुभकामनाएँ कॉपी करें:',text+' '+location.href)}}});
+document.getElementById('reply').addEventListener('click',()=>{const msg='नमस्ते! मैंने आपकी Happy Diwali वेबसाइट देखी। मेरी तरफ से दीपावली की शुभकामनाएँ!';window.open('https://wa.me/919314711514?text='+encodeURIComponent(msg),'_blank','noopener');});
+document.getElementById('share').addEventListener('click',async()=>{const text='🪔 आपको और आपके परिवार को दीपावली की हार्दिक शुभकामनाएँ! आपका जीवन सुख, शांति और समृद्धि से जगमगाता रहे। ✨';if(navigator.share){try{await navigator.share({title:'Happy Diwali',text,url:location.href})}catch(e){}}else{try{await navigator.clipboard.writeText(text+' '+location.href);alert('शुभकामनाएँ कॉपी हो गईं! अब शेयर करें।')}catch(e){prompt('शुभकामनाएँ कॉपी करें:',text+' '+location.href)}}});
 </script>
 </body>
 </html>
