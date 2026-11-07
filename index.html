@@ -1,63 +1,47 @@
 <!DOCTYPE html>
-<html lang="hi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#12051f">
-<meta name="description" content="आपको और आपके परिवार को दीपावली की हार्दिक शुभकामनाएँ — Happy Diwali!">
-<title>Happy Diwali ✨ | शुभ दीपावली</title>
+<html lang="hi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10051d"><meta name="description" content="SARITA PHOTO की ओर से शुभ दीपावली"><title>SARITA PHOTO ✨ शुभ दीपावली</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Serif+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-:root{--gold:#ffd878;--gold2:#ffad32;--cream:#fff4d4}
-body{min-height:100vh;overflow-x:hidden;overflow-y:auto;color:var(--cream);font-family:Georgia,'Noto Serif Devanagari',serif;background:radial-gradient(ellipse at 50% 80%,#4d1455 0%,#210b35 40%,#080615 100%);display:flex;align-items:center;justify-content:center;text-align:center}
-#sky{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
-.scene{position:relative;z-index:2;width:min(92%,900px);padding:35px 20px 100px}
-.eyebrow{letter-spacing:5px;text-transform:uppercase;font:600 12px Arial,sans-serif;color:#f4c96b;opacity:.9;margin-bottom:18px}
-h1{font-family:Georgia,serif;font-size:clamp(48px,10vw,112px);line-height:.98;letter-spacing:2px;color:#ffe8a2;text-shadow:0 0 12px #ffb52b,0 0 35px #f78a25,0 5px 25px #000;animation:glow 3s ease-in-out infinite alternate}
-h1 span{display:block;font-size:.42em;letter-spacing:7px;margin-top:18px;color:#fff2ce}
-.rule{width:120px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:30px auto}
-.greeting{font-size:clamp(18px,3vw,28px);line-height:1.8;color:#fff2dc;max-width:720px;margin:auto;text-shadow:0 2px 10px #000}
-.signature{margin-top:20px;font:italic 16px Arial,sans-serif;color:#f7c86d;letter-spacing:1px}
-.buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
-button{border:1px solid #ffdc91;background:linear-gradient(135deg,#ffdf8d,#f6a42c);color:#35133a;border-radius:999px;padding:13px 23px;font-weight:700;font-size:15px;cursor:pointer;box-shadow:0 0 20px #ffb12a44;transition:.25s}
-button:hover{transform:translateY(-3px);box-shadow:0 0 30px #ffb12a88}
-button.secondary{background:#ffffff0d;color:#ffe7a8;border-color:#e6bd6c}
-button.whatsapp{background:linear-gradient(135deg,#39df85,#12a85a);color:#052b17;border-color:#8affbc;box-shadow:0 0 22px #25d36655}
-.reply-note{font:12px Arial,sans-serif;color:#e9d8ff;margin-top:12px;opacity:.85}
-.diya{position:fixed;bottom:18px;font-size:40px;filter:drop-shadow(0 0 15px #ff9e22);animation:flicker 1.5s infinite alternate}
-.d1{left:8%}.d2{left:24%;font-size:30px;animation-delay:.3s}.d3{right:24%;font-size:30px;animation-delay:.6s}.d4{right:8%}
-@keyframes glow{from{text-shadow:0 0 10px #ffb52b,0 0 25px #f78a25,0 5px 25px #000}to{text-shadow:0 0 18px #fff0a8,0 0 55px #ff8a19,0 0 90px #e92e85}}
-@keyframes flicker{from{transform:scale(.96);opacity:.8}to{transform:scale(1.06);opacity:1}}
-@media(max-width:520px){.scene{padding-bottom:90px}.eyebrow{letter-spacing:3px}.greeting{line-height:1.65}.diya{font-size:28px}.d2,.d3{font-size:22px}}
-
-</style>
-</head>
-<body>
-<canvas id="sky"></canvas>
-<main class="scene">
-<div class="eyebrow">A festival of lights • Love • Peace • Prosperity</div>
-<h1>HAPPY<br>DIWALI<span>शुभ दीपावली</span></h1>
-<div class="rule"></div>
-<p class="greeting">दीपों की रोशनी आपके जीवन में सुख, शांति, समृद्धि और खुशियाँ लेकर आए।<br>आपको और आपके पूरे परिवार को दीपावली की हार्दिक शुभकामनाएँ!</p>
-<div class="signature">May your life shine brighter than ever ✨</div>
-<div class="buttons">
-<button id="fireworks">🎆 आतिशबाज़ी चलाएँ</button>
-<button class="secondary" id="share">💌 शुभकामनाएँ शेयर करें</button>
-<button class="whatsapp" id="reply">💬 हमें WhatsApp पर जवाब दें</button>
-</div>
-</main>
-<div class="diya d1">🪔</div><div class="diya d2">🪔</div><div class="diya d3">🪔</div><div class="diya d4">🪔</div>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#10051d;color:#fff2d3;font-family:'Noto Serif Devanagari',serif;overflow-x:hidden} :root{--gold:#ffd878;--amber:#ff9d24;--rose:#ff7db4}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,#ff7b2e,#ffe7a0,#ff75b6);z-index:100}
+#stars,#fire{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.nav{position:absolute;top:0;left:0;right:0;z-index:5;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;color:#ffdf91;font:700 12px Arial;letter-spacing:3px}.nav a{color:#ffe8ad;text-decoration:none;border:1px solid #ffdf9155;border-radius:50px;padding:9px 15px;letter-spacing:1px}
+section{position:relative;z-index:1}.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:95px 20px 80px;overflow:hidden;background:linear-gradient(180deg,#08051255,#140521dd),url('https://commons.wikimedia.org/wiki/Special:FilePath/Ayodhya%20Diwali%202021%2001.jpg') center/cover no-repeat}
+.hero:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,#ffad2525,transparent 60%)}.hero-inner{max-width:950px;position:relative;animation:rise 1.5s both}.brand{font:700 12px Arial;letter-spacing:7px;color:#ffe4a0;margin-bottom:22px;text-shadow:0 0 15px #ffac27}.tiny{font-size:clamp(14px,2vw,19px);color:#ffdfa0;letter-spacing:2px}.hero h1{font:700 clamp(48px,11vw,130px)/1.05 'Playfair Display',serif;margin:16px 0;color:#ffe8a3;text-shadow:0 0 10px #ffac28,0 0 42px #ff7b20,0 5px 25px #000}.hero h1 span{display:block;font:700 clamp(32px,7vw,75px)/1.5 'Noto Serif Devanagari',serif}.hero p{font-size:clamp(17px,3vw,24px);line-height:1.9;max-width:720px;margin:15px auto}.goldline{width:140px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:25px auto}
+.btn{border:1px solid #ffdf93;background:linear-gradient(135deg,#ffe5a0,#f7a52d);color:#301126;border-radius:50px;padding:14px 25px;font:700 15px Arial;cursor:pointer;box-shadow:0 0 22px #ffb72b33;transition:.3s}.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 0 30px #ffc04c77}.ghost{background:#ffffff10;color:#ffe8ac}
+.scroll{position:absolute;bottom:25px;font:11px Arial;letter-spacing:3px;color:#ffdf9c;animation:bob 1.8s infinite}
+.section{padding:100px 6%;text-align:center}.kicker{color:#ffcb68;font:700 11px Arial;letter-spacing:5px;text-transform:uppercase}.section h2{font-size:clamp(30px,6vw,58px);line-height:1.4;margin:14px 0;color:#ffe5a1;text-shadow:0 0 20px #ffb82c22}.lead{max-width:750px;margin:0 auto 35px;line-height:2;font-size:18px;color:#f7e7d0}
+.ram-section{background:linear-gradient(180deg,#19072a,#2a0a28 60%,#10051d)}.photo-wrap{max-width:1050px;margin:45px auto 0;border:1px solid #ffdc8c66;padding:12px;border-radius:22px;background:#ffffff08;box-shadow:0 20px 70px #0008;overflow:hidden}.photo-wrap img{width:100%;display:block;max-height:600px;object-fit:contain;border-radius:12px;background:#10051d}.photo-caption{padding:20px 10px 10px;color:#ffdfa0;font-size:15px}
+.diyas{display:flex;justify-content:center;gap:12px;font-size:32px;margin:25px 0}.diyas span{animation:flicker 1.2s infinite alternate}.diyas span:nth-child(2){animation-delay:.3s}.diyas span:nth-child(3){animation-delay:.6s}
+.puja-section{background:radial-gradient(ellipse at center,#4b1439,#160721 70%)}.puja-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1000px;margin:45px auto}.puja-grid article{border:1px solid #f9d77b55;border-radius:24px;padding:15px;background:#ffffff09;box-shadow:0 20px 50px #0004;transition:.4s}.puja-grid article:hover{transform:translateY(-8px);box-shadow:0 20px 55px #ffb72b22}.puja-grid img{width:100%;height:330px;object-fit:contain;background:#13051e;border-radius:15px}.puja-grid h3{color:#ffe4a0;font-size:23px;margin:18px 0 8px}.puja-grid p{line-height:1.8;color:#e9d6c5}
+.wishes{background:linear-gradient(180deg,#160620,#2d0b34,#10051d);padding:100px 20px}.wishbox{max-width:760px;margin:auto;border:1px solid #ffdf8b66;border-radius:30px;padding:clamp(25px,5vw,55px);background:linear-gradient(135deg,#ffffff0b,#ffbd3010);box-shadow:0 0 70px #ffae2510}.wishbox h2{font-size:clamp(32px,6vw,55px);color:#ffe7a1}.wishbox p{font-size:19px;line-height:2}.name-input{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:25px 0}.name-input input{background:#160720;border:1px solid #ffdc8b88;border-radius:50px;padding:13px 18px;color:#fff;font-size:16px;outline:none;min-width:210px}.personal{min-height:30px;color:#ffe2a0;font-size:20px!important}
+.interact{padding:80px 6%;text-align:center;background:#10051d}.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:900px;margin:35px auto}.tile{border:1px solid #ffda8b44;background:#ffffff08;border-radius:20px;padding:25px 15px;cursor:pointer;transition:.3s;color:#fff0ce}.tile:hover{transform:translateY(-5px);background:#ffbc2612}.tile .emoji{font-size:38px;display:block;margin-bottom:10px}.tile strong{color:#ffe5a0}.tile p{font-size:14px;line-height:1.7}
+footer{position:relative;text-align:center;padding:65px 20px 95px;background:radial-gradient(ellipse at center,#3c1239,#10051d)}footer h2{font:700 clamp(26px,5vw,50px) 'Playfair Display',serif;color:#ffe4a0}footer p{color:#e8d5c3;line-height:1.8}.signature{font:italic 20px 'Playfair Display',serif;color:#ffd878;letter-spacing:2px;margin-top:18px}
+.float-diya{position:fixed;bottom:18px;right:18px;z-index:20;border:1px solid #ffdf8b;background:#28102d;color:#ffdf8b;border-radius:50%;width:56px;height:56px;font-size:25px;cursor:pointer;box-shadow:0 0 22px #ffb52b55}
+.toast{position:fixed;left:50%;bottom:85px;transform:translateX(-50%);z-index:30;background:#30142e;border:1px solid #ffdf8b;border-radius:30px;padding:12px 18px;color:#ffecbc;opacity:0;pointer-events:none;transition:.3s}.toast.show{opacity:1}
+@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes bob{50%{transform:translateY(8px)}}@keyframes flicker{from{filter:brightness(.8);transform:scale(.95)}to{filter:brightness(1.3);transform:scale(1.08)}}
+@media(max-width:700px){.section{padding:70px 5%}.puja-grid{grid-template-columns:1fr}.puja-grid img{height:260px}.tiles{grid-template-columns:1fr}.hero{min-height:92svh}.nav{letter-spacing:2px}.brand{letter-spacing:4px}}
+</style></head><body>
+<div id="progress"></div><canvas id="stars"></canvas><canvas id="fire"></canvas>
+<header class="nav"><span>SARITA PHOTO</span><a href="#wishes">शुभकामनाएँ ✨</a></header>
+<section class="hero"><div class="hero-inner"><div class="brand">SARITA PHOTO • SINCE 1985</div><div class="tiny">॥ शुभ दीपावली ॥</div><h1>HAPPY<span>दीपावली</span></h1><div class="goldline"></div><p>दीपों की जगमगाहट, अपनों का प्यार और प्रभु श्रीराम का आशीर्वाद…<br>आपके जीवन को खुशियों से भर दे।</p><div class="diyas"><span>🪔</span><span>🪔</span><span>🪔</span></div><button class="btn" onclick="document.getElementById('ram').scrollIntoView({behavior:'smooth'})">✨ दिवाली की कहानी देखें</button></div><div class="scroll">SCROLL TO FEEL THE FESTIVAL ↓</div></section>
+<section class="section ram-section" id="ram"><div class="kicker">THE RETURN OF LIGHT</div><h2>प्रभु श्रीराम का अयोध्या आगमन</h2><p class="lead">चौदह वर्षों का वनवास पूर्ण कर प्रभु श्रीराम, माता सीता और लक्ष्मण जी के अयोध्या लौटने पर दीपों से सजी रामनगरी ने उनका स्वागत किया।<br>यह पर्व अंधकार पर प्रकाश और अधर्म पर धर्म की विजय का प्रतीक है।</p>
+<div class="photo-wrap"><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Rama%20and%20Sita%2C%20with%20Lakshmana%20returning%20to%20Ayodhya.jpg" alt="प्रभु श्रीराम, माता सीता और लक्ष्मण जी पुष्पक विमान से अयोध्या लौटते हुए"><div class="photo-caption">जय श्रीराम • जय सियाराम • अयोध्या में मंगलमय आगमन</div></div><div class="diyas"><span>🪔</span><span>🪔</span><span>🪔</span><span>🪔</span><span>🪔</span></div></section>
+<section class="section puja-section"><div class="kicker">DIVINE BLESSINGS</div><h2>श्री लक्ष्मी–गणेश–सरस्वती पूजन</h2><p class="lead">माँ लक्ष्मी धन-समृद्धि, श्री गणेश बुद्धि-विघ्न विनाश और माँ सरस्वती ज्ञान व कला का आशीर्वाद दें।</p>
+<div class="puja-grid"><article><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Diwali%20Puja.JPG" alt="दीपावली पूजा में श्री गणेश, माँ लक्ष्मी और माँ सरस्वती"><h3>माँ लक्ष्मी • श्री गणेश • माँ सरस्वती</h3><p>आपके घर में सुख, शांति, ज्ञान और समृद्धि सदैव बनी रहे।</p></article><article><img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:FilePath/Diwali%20Ganesh%20Laxmi%20Puja%20001.jpg" alt="दीपावली लक्ष्मी गणेश पूजन"><h3>शुभ लाभ • मंगलमय दीपावली</h3><p>हर दीप आपके जीवन में नई उम्मीद और नई खुशियाँ लेकर आए।</p></article></div></section>
+<section class="wishes" id="wishes"><div class="wishbox"><div class="kicker">A LITTLE PERSONAL WISH</div><h2>आपके नाम एक शुभकामना ✨</h2><p>अपना नाम लिखें और अपने लिए खास दिवाली संदेश पाएँ।</p><div class="name-input"><input id="visitorName" maxlength="40" placeholder="आपका नाम लिखें…"><button class="btn" id="makeWish">मेरी शुभकामना बनाएँ</button></div><p class="personal" id="personalWish">आपको और आपके परिवार को शुभ दीपावली 🪔</p><button class="btn ghost" id="shareWish">💌 यह शुभकामना शेयर करें</button></div></section>
+<section class="interact"><div class="kicker">MAKE A LITTLE MAGIC</div><h2>दीप जलाएँ • खुशियाँ बाँटें</h2><p class="lead">नीचे किसी भी दीप पर क्लिक करें—और अपनी स्क्रीन को रोशनी से भर दें।</p><div class="tiles"><button class="tile" id="lightTile"><span class="emoji">🪔</span><strong>दीप जलाएँ</strong><p>एक क्लिक में रोशनी और चमक</p></button><button class="tile" id="fireTile"><span class="emoji">🎆</span><strong>आसमान सजाएँ</strong><p>रंग-बिरंगी आतिशबाज़ी</p></button><button class="tile" id="copyTile"><span class="emoji">💖</span><strong>प्यार बाँटें</strong><p>शुभकामना कॉपी करके भेजें</p></button></div></section>
+<footer><div class="diyas"><span>🪔</span><span>✨</span><span>🪔</span></div><h2>शुभ दीपावली</h2><p>आपका जीवन खुशियों, प्रेम, स्वास्थ्य और समृद्धि से जगमगाता रहे।<br>प्रभु श्रीराम और माँ लक्ष्मी का आशीर्वाद आप पर बना रहे।</p><div class="signature">SARITA PHOTO</div><p>Creating Timeless Memories • Since 1985</p><p>स्नेह एवं शुभकामनाओं सहित ❤️</p></footer>
+<button class="float-diya" id="floatDiya" title="दीप जलाएँ">🪔</button><div class="toast" id="toast">दीप जल उठा! 🪔</div>
 <script>
-const canvas=document.getElementById('sky'),ctx=canvas.getContext('2d');let w,h,particles=[];
-function resize(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0)}
-addEventListener('resize',resize);resize();
-function burst(x=Math.random()*innerWidth,y=Math.random()*innerHeight*.55){const colors=['#ffd76a','#ff8c42','#ff4d9d','#a78bfa','#ffffff','#7cf7ff'];for(let i=0;i<75;i++){let a=Math.random()*Math.PI*2,s=Math.random()*4+1;particles.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:Math.random()*60+35,color:colors[Math.floor(Math.random()*colors.length)],r:Math.random()*2.5+1})}}
-function animate(){ctx.clearRect(0,0,innerWidth,innerHeight);particles=particles.filter(p=>p.life>0);for(const p of particles){p.x+=p.vx;p.y+=p.vy;p.vy+=.025;p.vx*=.99;p.life--;ctx.globalAlpha=Math.max(0,p.life/75);ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}ctx.globalAlpha=1;requestAnimationFrame(animate)}
-animate();setInterval(()=>burst(),1500);
-setTimeout(()=>burst(innerWidth*.5,innerHeight*.25),500);
-document.getElementById('fireworks').addEventListener('click',()=>{for(let i=0;i<5;i++)setTimeout(()=>burst(Math.random()*innerWidth,Math.random()*innerHeight*.55),i*180)});
-document.getElementById('reply').addEventListener('click',()=>{const msg='नमस्ते! मैंने आपकी Happy Diwali वेबसाइट देखी। मेरी तरफ से दीपावली की शुभकामनाएँ!';window.open('https://wa.me/919314711514?text='+encodeURIComponent(msg),'_blank','noopener');});
-document.getElementById('share').addEventListener('click',async()=>{const text='🪔 आपको और आपके परिवार को दीपावली की हार्दिक शुभकामनाएँ! आपका जीवन सुख, शांति और समृद्धि से जगमगाता रहे। ✨';if(navigator.share){try{await navigator.share({title:'Happy Diwali',text,url:location.href})}catch(e){}}else{try{await navigator.clipboard.writeText(text+' '+location.href);alert('शुभकामनाएँ कॉपी हो गईं! अब शेयर करें।')}catch(e){prompt('शुभकामनाएँ कॉपी करें:',text+' '+location.href)}}});
-</script>
-</body>
-</html>
+const star=document.getElementById('stars'),sctx=star.getContext('2d');let sw,sh,stars=[];function size(){sw=star.width=innerWidth;sh=star.height=innerHeight;stars=Array.from({length:100},()=>({x:Math.random()*sw,y:Math.random()*sh,r:Math.random()*1.5+.2,a:Math.random(),v:Math.random()*.015+.003}))}size();addEventListener('resize',size);function twinkle(){sctx.clearRect(0,0,sw,sh);stars.forEach(p=>{p.a+=p.v;if(p.a>1||p.a<0)p.v*=-1;sctx.globalAlpha=Math.max(.1,p.a);sctx.fillStyle='#ffe8a5';sctx.beginPath();sctx.arc(p.x,p.y,p.r,0,Math.PI*2);sctx.fill()});sctx.globalAlpha=1;requestAnimationFrame(twinkle)}twinkle();
+const c=document.getElementById('fire'),ctx=c.getContext('2d');let cw,ch,parts=[];function resizeFire(){cw=c.width=innerWidth;ch=c.height=innerHeight}resizeFire();addEventListener('resize',resizeFire);function burst(x=Math.random()*cw,y=Math.random()*ch*.55){let cols=['#ffdd75','#ff6d9e','#9dfaff','#fff','#ff9b35','#c5a3ff'];for(let i=0;i<80;i++){let a=Math.random()*6.283,s=Math.random()*4+1;parts.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:55+Math.random()*35,col:cols[Math.floor(Math.random()*cols.length)]})}}function draw(){ctx.clearRect(0,0,cw,ch);parts=parts.filter(p=>p.life>0);parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.025;p.life--;ctx.globalAlpha=p.life/90;ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;requestAnimationFrame(draw)}draw();setInterval(()=>{if(Math.random()<.5)burst()},2300);
+function toast(t){let el=document.getElementById('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200)}
+function fireworks(){for(let i=0;i<5;i++)setTimeout(()=>burst(Math.random()*cw,Math.random()*ch*.55),i*180)}
+document.getElementById('fireTile').onclick=fireworks;document.getElementById('lightTile').onclick=()=>{document.body.classList.toggle('bright');document.body.style.filter=document.body.classList.contains('bright')?'brightness(1.18)':'none';fireworks();toast('आपने दीप जला दिया 🪔')};document.getElementById('floatDiya').onclick=()=>{fireworks();toast('दीप जल उठा! 🪔')};
+document.getElementById('makeWish').onclick=()=>{let n=document.getElementById('visitorName').value.trim();document.getElementById('personalWish').textContent=(n?n+' जी, ':'')+'आपको और आपके परिवार को शुभ दीपावली! प्रभु श्रीराम और माँ लक्ष्मी आपके जीवन में सुख, शांति, प्रेम और समृद्धि भर दें। 🪔';fireworks()};
+function wishText(){return document.getElementById('personalWish').textContent+' ✨ शुभकामनाएँ — SARITA PHOTO '+location.href}
+document.getElementById('shareWish').onclick=async()=>{if(navigator.share){try{await navigator.share({title:'शुभ दीपावली | SARITA PHOTO',text:wishText(),url:location.href})}catch(e){}}else{try{await navigator.clipboard.writeText(wishText());toast('शुभकामना कॉपी हो गई!')}catch(e){prompt('कॉपी करें:',wishText())}}};
+document.getElementById('copyTile').onclick=async()=>{try{await navigator.clipboard.writeText(wishText());toast('शुभकामना कॉपी हो गई ❤️')}catch(e){prompt('शुभकामना कॉपी करें:',wishText())}};
+addEventListener('scroll',()=>{let d=document.documentElement;document.getElementById('progress').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%'});
+</script></body></html>
