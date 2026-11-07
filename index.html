@@ -21,7 +21,28 @@ footer{position:relative;text-align:center;padding:65px 20px 95px;background:rad
 .toast{position:fixed;left:50%;bottom:85px;transform:translateX(-50%);z-index:30;background:#30142e;border:1px solid #ffdf8b;border-radius:30px;padding:12px 18px;color:#ffecbc;opacity:0;pointer-events:none;transition:.3s}.toast.show{opacity:1}
 @keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes bob{50%{transform:translateY(8px)}}@keyframes flicker{from{filter:brightness(.8);transform:scale(.95)}to{filter:brightness(1.3);transform:scale(1.08)}}
 @media(max-width:700px){.section{padding:70px 5%}.puja-grid{grid-template-columns:1fr}.puja-grid img{height:260px}.tiles{grid-template-columns:1fr}.hero{min-height:92svh}.nav{letter-spacing:2px}.brand{letter-spacing:4px}}
+
+/* Automatic SARITA PHOTO greeting-call intro */
+#call-intro{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#3b1740 0%,#16091f 48%,#05030b 100%);transition:opacity 1s ease,visibility 1s ease;color:#fff1d1}
+#call-intro:before,#call-intro:after{content:"";position:absolute;width:min(75vw,430px);aspect-ratio:1;border:1px solid #ffd87955;border-radius:50%;animation:callPulse 2.6s ease-out infinite}
+#call-intro:after{animation-delay:1.3s}
+.call-content{position:relative;z-index:2;padding:28px 20px;max-width:500px;width:100%;animation:callRise 1s both}
+.call-logo{font:700 11px Arial;letter-spacing:5px;color:#ffd879;margin-bottom:34px;text-shadow:0 0 20px #ffb52b66}
+.call-avatar{width:116px;height:116px;border-radius:50%;margin:0 auto 25px;display:grid;place-items:center;font-size:50px;background:linear-gradient(145deg,#f9d77b,#a74d36);box-shadow:0 0 0 8px #ffe3a01a,0 0 45px #ffb52b66;animation:avatarGlow 2s ease-in-out infinite alternate}
+.call-content h1{font:600 clamp(25px,6vw,39px) 'Playfair Display',serif;letter-spacing:2px;margin:0 0 12px;color:#ffe5a1}
+.call-sub{font:500 15px Arial;letter-spacing:2px;color:#f5d9b7;margin:14px 0 25px}
+.call-status{display:flex;justify-content:center;align-items:center;gap:8px;font:12px Arial;letter-spacing:3px;color:#ffca70;text-transform:uppercase}
+.call-status i{width:6px;height:6px;border-radius:50%;background:#ffca70;animation:statusBlink 1s infinite}
+.call-blessing{margin-top:28px;font-size:clamp(16px,4vw,21px);line-height:1.8;color:#fff0cf}
+.call-footer{margin-top:36px;font:10px Arial;letter-spacing:3px;color:#bda9c5}
+#call-intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes callPulse{0%{transform:scale(.65);opacity:.8}100%{transform:scale(1.55);opacity:0}}
+@keyframes avatarGlow{to{box-shadow:0 0 0 12px #ffe3a00a,0 0 65px #ffb52b99;transform:scale(1.04)}}
+@keyframes callRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes statusBlink{50%{opacity:.2}}
+@media(prefers-reduced-motion:reduce){#call-intro *{animation:none!important}}
 </style></head><body>
+<div id="call-intro" aria-label="SARITA PHOTO Diwali greeting intro"><div class="call-content"><div class="call-logo">SARITA PHOTO • SINCE 1985</div><div class="call-avatar">🪔</div><h1>SARITA PHOTO</h1><div class="call-sub">Calling for SARITA PHOTO…</div><div class="call-status"><i></i> Diwali Greeting <i></i></div><div class="call-blessing">दीवाली री राम-राम सा!<br><span style="color:#ffd879">🪔 शुभ दीपावली 🪔</span></div><div class="call-footer">A FESTIVE GREETING EXPERIENCE</div></div></div>
 <div id="progress"></div><canvas id="stars"></canvas><canvas id="fire"></canvas>
 <header class="nav"><span>SARITA PHOTO</span><a href="#wishes">शुभकामनाएँ ✨</a></header>
 <section class="hero"><div class="hero-inner"><div class="brand">SARITA PHOTO • SINCE 1985</div><div class="tiny">॥ शुभ दीपावली ॥</div><h1>HAPPY<span>दीपावली</span></h1><div class="goldline"></div><p>दीपों की जगमगाहट, अपनों का प्यार और प्रभु श्रीराम का आशीर्वाद…<br>आपके जीवन को खुशियों से भर दे।</p><div class="diyas"><span>🪔</span><span>🪔</span><span>🪔</span></div><button class="btn" onclick="document.getElementById('ram').scrollIntoView({behavior:'smooth'})">✨ दिवाली की कहानी देखें</button></div><div class="scroll">SCROLL TO FEEL THE FESTIVAL ↓</div></section>
@@ -34,6 +55,8 @@ footer{position:relative;text-align:center;padding:65px 20px 95px;background:rad
 <footer><div class="diyas"><span>🪔</span><span>✨</span><span>🪔</span></div><h2>शुभ दीपावली</h2><p>आपका जीवन खुशियों, प्रेम, स्वास्थ्य और समृद्धि से जगमगाता रहे।<br>प्रभु श्रीराम और माँ लक्ष्मी का आशीर्वाद आप पर बना रहे।</p><div class="signature">SARITA PHOTO</div><p>Creating Timeless Memories • Since 1985</p><p>स्नेह एवं शुभकामनाओं सहित ❤️</p></footer>
 <button class="float-diya" id="floatDiya" title="दीप जलाएँ">🪔</button><div class="toast" id="toast">दीप जल उठा! 🪔</div>
 <script>
+// Auto fade from branded greeting-call intro to the Diwali website (no buttons required)
+window.addEventListener('load',()=>{setTimeout(()=>{const intro=document.getElementById('call-intro');if(intro)intro.classList.add('hide');},4200)});
 const star=document.getElementById('stars'),sctx=star.getContext('2d');let sw,sh,stars=[];function size(){sw=star.width=innerWidth;sh=star.height=innerHeight;stars=Array.from({length:100},()=>({x:Math.random()*sw,y:Math.random()*sh,r:Math.random()*1.5+.2,a:Math.random(),v:Math.random()*.015+.003}))}size();addEventListener('resize',size);function twinkle(){sctx.clearRect(0,0,sw,sh);stars.forEach(p=>{p.a+=p.v;if(p.a>1||p.a<0)p.v*=-1;sctx.globalAlpha=Math.max(.1,p.a);sctx.fillStyle='#ffe8a5';sctx.beginPath();sctx.arc(p.x,p.y,p.r,0,Math.PI*2);sctx.fill()});sctx.globalAlpha=1;requestAnimationFrame(twinkle)}twinkle();
 const c=document.getElementById('fire'),ctx=c.getContext('2d');let cw,ch,parts=[];function resizeFire(){cw=c.width=innerWidth;ch=c.height=innerHeight}resizeFire();addEventListener('resize',resizeFire);function burst(x=Math.random()*cw,y=Math.random()*ch*.55){let cols=['#ffdd75','#ff6d9e','#9dfaff','#fff','#ff9b35','#c5a3ff'];for(let i=0;i<80;i++){let a=Math.random()*6.283,s=Math.random()*4+1;parts.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:55+Math.random()*35,col:cols[Math.floor(Math.random()*cols.length)]})}}function draw(){ctx.clearRect(0,0,cw,ch);parts=parts.filter(p=>p.life>0);parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.025;p.life--;ctx.globalAlpha=p.life/90;ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;requestAnimationFrame(draw)}draw();setInterval(()=>{if(Math.random()<.5)burst()},2300);
 function toast(t){let el=document.getElementById('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200)}
