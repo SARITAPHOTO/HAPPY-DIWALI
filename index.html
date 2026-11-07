@@ -22,27 +22,36 @@ footer{position:relative;text-align:center;padding:65px 20px 95px;background:rad
 @keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes bob{50%{transform:translateY(8px)}}@keyframes flicker{from{filter:brightness(.8);transform:scale(.95)}to{filter:brightness(1.3);transform:scale(1.08)}}
 @media(max-width:700px){.section{padding:70px 5%}.puja-grid{grid-template-columns:1fr}.puja-grid img{height:260px}.tiles{grid-template-columns:1fr}.hero{min-height:92svh}.nav{letter-spacing:2px}.brand{letter-spacing:4px}}
 
-/* Automatic SARITA PHOTO greeting-call intro */
-#call-intro{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#3b1740 0%,#16091f 48%,#05030b 100%);transition:opacity 1s ease,visibility 1s ease;color:#fff1d1}
-#call-intro:before,#call-intro:after{content:"";position:absolute;width:min(75vw,430px);aspect-ratio:1;border:1px solid #ffd87955;border-radius:50%;animation:callPulse 2.6s ease-out infinite}
-#call-intro:after{animation-delay:1.3s}
-.call-content{position:relative;z-index:2;padding:28px 20px;max-width:500px;width:100%;animation:callRise 1s both}
-.call-logo{font:700 11px Arial;letter-spacing:5px;color:#ffd879;margin-bottom:34px;text-shadow:0 0 20px #ffb52b66}
-.call-avatar{width:116px;height:116px;border-radius:50%;margin:0 auto 25px;display:grid;place-items:center;font-size:50px;background:linear-gradient(145deg,#f9d77b,#a74d36);box-shadow:0 0 0 8px #ffe3a01a,0 0 45px #ffb52b66;animation:avatarGlow 2s ease-in-out infinite alternate}
-.call-content h1{font:600 clamp(25px,6vw,39px) 'Playfair Display',serif;letter-spacing:2px;margin:0 0 12px;color:#ffe5a1}
-.call-sub{font:500 15px Arial;letter-spacing:2px;color:#f5d9b7;margin:14px 0 25px}
-.call-status{display:flex;justify-content:center;align-items:center;gap:8px;font:12px Arial;letter-spacing:3px;color:#ffca70;text-transform:uppercase}
-.call-status i{width:6px;height:6px;border-radius:50%;background:#ffca70;animation:statusBlink 1s infinite}
-.call-blessing{margin-top:28px;font-size:clamp(16px,4vw,21px);line-height:1.8;color:#fff0cf}
-.call-footer{margin-top:36px;font:10px Arial;letter-spacing:3px;color:#bda9c5}
+/* Cinematic luxury Diwali greeting-call intro */
+#call-intro{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;text-align:center;overflow:hidden;background:#08030e;color:#fff3d2;isolation:isolate;transition:opacity 1.2s ease,visibility 1.2s ease}
+#call-intro:before{content:"";position:absolute;inset:-20%;z-index:-2;background:radial-gradient(ellipse at 50% 48%,#742b39 0%,#31102c 26%,#100619 58%,#030208 78%);animation:introBreath 8s ease-in-out infinite alternate}
+#call-intro:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#05020a66,transparent 35%,#05020a99),radial-gradient(ellipse at center,transparent 20%,#0008 100%);pointer-events:none}
+.intro-stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 14% 22%,#ffe9ad 50%,transparent 60%),radial-gradient(1px 1px at 80% 17%,#fff 50%,transparent 60%),radial-gradient(2px 2px at 87% 68%,#ffc66b 50%,transparent 60%),radial-gradient(1px 1px at 21% 76%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 62% 30%,#ffe7b0 50%,transparent 60%);opacity:.8;animation:starDrift 8s linear infinite}
+.intro-ornament{position:absolute;top:-14vw;left:50%;transform:translateX(-50%);width:min(110vw,900px);height:min(110vw,900px);border:1px solid #d7a65b22;border-radius:50%;box-shadow:0 0 0 28px #d7a65b08,0 0 0 58px #d7a65b05}
+.intro-card{position:relative;width:min(90vw,480px);padding:36px 22px 30px;animation:introAppear 1.4s cubic-bezier(.2,.8,.2,1) both}
+.intro-kicker{font:600 10px Arial,sans-serif;letter-spacing:5px;color:#d9b875;text-transform:uppercase}
+.intro-monogram{position:relative;width:132px;height:132px;margin:28px auto 24px;display:grid;place-items:center;border-radius:50%;border:1px solid #f8d58a88;background:linear-gradient(145deg,#4d1b30,#16091e);box-shadow:inset 0 0 30px #f3b85a20,0 0 0 8px #e8b95b0b,0 0 65px #e9a94a35}
+.intro-monogram:before,.intro-monogram:after{content:"";position:absolute;inset:-12px;border:1px solid #f3d08b33;border-radius:50%;animation:ringWave 3s ease-out infinite}
+.intro-monogram:after{animation-delay:1.5s}
+.intro-monogram span{font-size:55px;filter:drop-shadow(0 0 16px #ffc85d);animation:diyaFlicker 2s ease-in-out infinite alternate}
+.intro-brand{font:700 clamp(26px,7vw,42px) 'Playfair Display',serif;letter-spacing:2px;color:#fff0bd;text-shadow:0 2px 20px #ffbf5b55;margin:0}
+.intro-since{font:10px Arial;letter-spacing:4px;color:#bfa57b;margin-top:10px}
+.intro-rule{height:1px;width:110px;margin:25px auto;background:linear-gradient(90deg,transparent,#e8c17a,transparent)}
+.intro-calling{font:500 12px Arial;letter-spacing:3px;text-transform:uppercase;color:#e9c88c;margin:18px 0 14px}
+.intro-calling .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#f6c46c;margin:0 3px;animation:callDot 1.2s infinite}
+.intro-message{font:600 clamp(20px,5vw,28px)/1.8 'Noto Serif Devanagari',serif;color:#fff0d0}
+.intro-subtitle{font:12px Arial;letter-spacing:1.5px;color:#d4b8b0;margin-top:10px}
+.intro-bottom{margin-top:34px;font:9px Arial;letter-spacing:3px;color:#9c829c}
 #call-intro.hide{opacity:0;visibility:hidden;pointer-events:none}
-@keyframes callPulse{0%{transform:scale(.65);opacity:.8}100%{transform:scale(1.55);opacity:0}}
-@keyframes avatarGlow{to{box-shadow:0 0 0 12px #ffe3a00a,0 0 65px #ffb52b99;transform:scale(1.04)}}
-@keyframes callRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-@keyframes statusBlink{50%{opacity:.2}}
+@keyframes introBreath{to{transform:scale(1.12);filter:hue-rotate(12deg)}}
+@keyframes ringWave{0%{transform:scale(.8);opacity:.75}100%{transform:scale(1.35);opacity:0}}
+@keyframes introAppear{from{opacity:0;transform:translateY(30px) scale(.96);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}
+@keyframes diyaFlicker{from{transform:scale(.96);filter:drop-shadow(0 0 8px #ffc85d)}to{transform:scale(1.05);filter:drop-shadow(0 0 25px #ffc85d)}}
+@keyframes callDot{50%{opacity:.15;transform:scale(.7)}}
+@keyframes starDrift{to{transform:translateY(-18px)}}
 @media(prefers-reduced-motion:reduce){#call-intro *{animation:none!important}}
 </style></head><body>
-<div id="call-intro" aria-label="SARITA PHOTO Diwali greeting intro"><div class="call-content"><div class="call-logo">SARITA PHOTO • SINCE 1985</div><div class="call-avatar">🪔</div><h1>SARITA PHOTO</h1><div class="call-sub">Calling for SARITA PHOTO…</div><div class="call-status"><i></i> Diwali Greeting <i></i></div><div class="call-blessing">दीवाली री राम-राम सा!<br><span style="color:#ffd879">🪔 शुभ दीपावली 🪔</span></div><div class="call-footer">A FESTIVE GREETING EXPERIENCE</div></div></div>
+<div id="call-intro" aria-label="SARITA PHOTO Diwali greeting intro"><div class="intro-stars"></div><div class="intro-ornament"></div><div class="intro-card"><div class="intro-kicker">A Festive Greeting From</div><div class="intro-monogram"><span>🪔</span></div><h1 class="intro-brand">SARITA PHOTO</h1><div class="intro-since">CREATING MEMORIES • SINCE 1985</div><div class="intro-rule"></div><div class="intro-calling">Calling for SARITA PHOTO <span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="intro-message">दीवाली री राम-राम सा!<br><span style="color:#eac17b">शुभ दीपावली</span></div><div class="intro-subtitle">आपके परिवार के लिए प्रेम और शुभकामनाएँ</div><div class="intro-bottom">A LITTLE LIGHT • A LOT OF LOVE</div></div></div>
 <div id="progress"></div><canvas id="stars"></canvas><canvas id="fire"></canvas>
 <header class="nav"><span>SARITA PHOTO</span><a href="#wishes">शुभकामनाएँ ✨</a></header>
 <section class="hero"><div class="hero-inner"><div class="brand">SARITA PHOTO • SINCE 1985</div><div class="tiny">॥ शुभ दीपावली ॥</div><h1>HAPPY<span>दीपावली</span></h1><div class="goldline"></div><p>दीपों की जगमगाहट, अपनों का प्यार और प्रभु श्रीराम का आशीर्वाद…<br>आपके जीवन को खुशियों से भर दे।</p><div class="diyas"><span>🪔</span><span>🪔</span><span>🪔</span></div><button class="btn" onclick="document.getElementById('ram').scrollIntoView({behavior:'smooth'})">✨ दिवाली की कहानी देखें</button></div><div class="scroll">SCROLL TO FEEL THE FESTIVAL ↓</div></section>
