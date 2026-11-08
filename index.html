@@ -22,33 +22,6 @@ footer{position:relative;text-align:center;padding:65px 20px 95px;background:rad
 @keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes bob{50%{transform:translateY(8px)}}@keyframes flicker{from{filter:brightness(.8);transform:scale(.95)}to{filter:brightness(1.3);transform:scale(1.08)}}
 @media(max-width:700px){.section{padding:70px 5%}.puja-grid{grid-template-columns:1fr}.puja-grid img{height:260px}.tiles{grid-template-columns:1fr}.hero{min-height:92svh}.nav{letter-spacing:2px}.brand{letter-spacing:4px}}
 
-/* Cinematic luxury Diwali greeting-call intro */
-#call-intro{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;text-align:center;overflow:hidden;background:#210700;color:#fff3d2;isolation:isolate;transition:opacity 1.2s ease,visibility 1.2s ease}
-#call-intro:before{content:"";position:absolute;inset:-20%;z-index:-2;background:radial-gradient(ellipse at 50% 48%,#9a3900 0%,#5c1b00 26%,#3a1000 58%,#160400 78%);animation:introBreath 8s ease-in-out infinite alternate}
-#call-intro:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#21070066,transparent 35%,#21070099),radial-gradient(ellipse at center,transparent 20%,#0008 100%);pointer-events:none}
-.intro-stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 14% 22%,#ffe9ad 50%,transparent 60%),radial-gradient(1px 1px at 80% 17%,#fff 50%,transparent 60%),radial-gradient(2px 2px at 87% 68%,#ffc66b 50%,transparent 60%),radial-gradient(1px 1px at 21% 76%,#fff 50%,transparent 60%),radial-gradient(1px 1px at 62% 30%,#ffe7b0 50%,transparent 60%);opacity:.8;animation:starDrift 8s linear infinite}
-.intro-ornament{position:absolute;top:-14vw;left:50%;transform:translateX(-50%);width:min(110vw,900px);height:min(110vw,900px);border:1px solid #ffbf4522;border-radius:50%;box-shadow:0 0 0 28px #ffbf4508,0 0 0 58px #ffbf4505}
-.intro-card{position:relative;width:min(90vw,480px);padding:36px 22px 30px;animation:introAppear 1.4s cubic-bezier(.2,.8,.2,1) both}
-.intro-kicker{font:600 10px Arial,sans-serif;letter-spacing:5px;color:#d9b875;text-transform:uppercase}
-.intro-monogram{position:relative;width:132px;height:132px;margin:28px auto 24px;display:grid;place-items:center;border-radius:50%;border:1px solid #f8d58a88;background:linear-gradient(145deg,#6a2100,#300b00);box-shadow:inset 0 0 30px #f3b85a20,0 0 0 8px #e8b95b0b,0 0 65px #e9a94a35}
-.intro-monogram:before,.intro-monogram:after{content:"";position:absolute;inset:-12px;border:1px solid #f3d08b33;border-radius:50%;animation:ringWave 3s ease-out infinite}
-.intro-monogram:after{animation-delay:1.5s}
-.intro-monogram span{font-size:55px;filter:drop-shadow(0 0 16px #ffc85d);animation:diyaFlicker 2s ease-in-out infinite alternate}
-.intro-brand{font:700 clamp(26px,7vw,42px) 'Playfair Display',serif;letter-spacing:2px;color:#fff0bd;text-shadow:0 2px 20px #ffbf5b55;margin:0}
-.intro-since{font:10px Arial;letter-spacing:4px;color:#bfa57b;margin-top:10px}
-.intro-rule{height:1px;width:110px;margin:25px auto;background:linear-gradient(90deg,transparent,#e8c17a,transparent)}
-.intro-calling{font:500 12px Arial;letter-spacing:3px;text-transform:uppercase;color:#e9c88c;margin:18px 0 14px}
-.intro-calling .dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#f6c46c;margin:0 3px;animation:callDot 1.2s infinite}
-.intro-message{font:600 clamp(20px,5vw,28px)/1.8 'Noto Serif Devanagari',serif;color:#fff0d0}
-.intro-subtitle{font:12px Arial;letter-spacing:1.5px;color:#d4b8b0;margin-top:10px}
-.intro-bottom{margin-top:34px;font:9px Arial;letter-spacing:3px;color:#9c829c}
-#call-intro.hide{opacity:0;visibility:hidden;pointer-events:none}
-@keyframes introBreath{to{transform:scale(1.12);filter:hue-rotate(12deg)}}
-@keyframes ringWave{0%{transform:scale(.8);opacity:.75}100%{transform:scale(1.35);opacity:0}}
-@keyframes introAppear{from{opacity:0;transform:translateY(30px) scale(.96);filter:blur(5px)}to{opacity:1;transform:none;filter:none}}
-@keyframes diyaFlicker{from{transform:scale(.96);filter:drop-shadow(0 0 8px #ffc85d)}to{transform:scale(1.05);filter:drop-shadow(0 0 25px #ffc85d)}}
-@keyframes callDot{50%{opacity:.15;transform:scale(.7)}}
-@keyframes starDrift{to{transform:translateY(-18px)}}
 @media(prefers-reduced-motion:reduce){#call-intro *{animation:none!important}}
 
 /* Festive photo gallery + lively reveal */
@@ -69,9 +42,12 @@ footer{position:relative;text-align:center;padding:65px 20px 95px;background:rad
 @keyframes lampFloat{0%{transform:translateY(105vh) rotate(-8deg);opacity:0}10%{opacity:.65}90%{opacity:.5}100%{transform:translateY(-15vh) rotate(12deg);opacity:0}}
 @media(max-width:720px){.festive-gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 170px 170px;gap:10px}.festive-card:first-child{grid-row:span 2}.festive-card:nth-child(4){grid-column:span 2}.festive-card .card-caption{left:12px;right:12px;bottom:12px}.festive-showcase{padding:65px 4%}}
 @media(prefers-reduced-motion:reduce){.reveal,.festive-card img,.floating-lamp{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* Diwali sound toggle */
+#musicBtn{position:fixed;left:18px;bottom:18px;z-index:50;border:1px solid #ffdf8b;background:linear-gradient(135deg,#6b2400,#351000);color:#ffe6a4;border-radius:50px;padding:12px 17px;font:600 13px Arial;box-shadow:0 0 24px #ffb52b33;cursor:pointer;backdrop-filter:blur(8px)}#musicBtn.playing{background:linear-gradient(135deg,#ffc95b,#f08a18);color:#421300}
 </style></head><body>
 <div id="call-intro" aria-label="SARITA PHOTO Diwali greeting intro"><div class="intro-stars"></div><div class="intro-ornament"></div><div class="intro-card"><div class="intro-kicker">शुभ दीपावली • SARITA PHOTO</div><div class="intro-monogram"><span>🪔</span></div><h1 class="intro-brand">SARITA PHOTO</h1><div class="intro-since">CREATING MEMORIES • SINCE 1985</div><div class="intro-rule"></div><div class="intro-calling">Calling for SARITA PHOTO <span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="intro-message">दीवाली री राम-राम सा!<br><span style="color:#eac17b">शुभ दीपावली</span></div><div class="intro-subtitle">आपके परिवार के लिए प्रेम और शुभकामनाएँ</div><div class="intro-bottom">A LITTLE LIGHT • A LOT OF LOVE</div><button id="introSkip" class="btn" style="margin-top:22px;padding:10px 22px;font-size:12px">आगे बढ़ें ✨</button></div></div>
-<div id="progress"></div><canvas id="stars"></canvas><canvas id="fire"></canvas>
+<button id="musicBtn" aria-label="Diwali music toggle">🎵 दिवाली संगीत चालू करें</button><div id="progress"></div><canvas id="stars"></canvas><canvas id="fire"></canvas>
 <header class="nav"><span>SARITA PHOTO</span><a href="#wishes">शुभकामनाएँ ✨</a></header>
 <section class="hero"><div class="hero-inner"><div class="brand">SARITA PHOTO • SINCE 1985</div><div class="tiny">॥ शुभ दीपावली ॥</div><h1>HAPPY<span>दीपावली</span></h1><div class="goldline"></div><p>दीपों की पावन जगमगाहट आपके जीवन से हर अंधकार दूर करे। प्रभु श्रीराम की कृपा, माँ लक्ष्मी का आशीर्वाद और अपनों का प्रेम आपके घर-आँगन को सुख, शांति, स्वास्थ्य, समृद्धि और खुशियों से भर दे।<br>आपके परिवार में सदैव प्रेम, एकता और मंगल बना रहे।</p><div class="diyas"><span>🪔</span><span>🪔</span><span>🪔</span></div><button class="btn" onclick="document.getElementById('ram').scrollIntoView({behavior:'smooth'})">✨ दिवाली की कहानी देखें</button></div><div class="scroll">SCROLL TO FEEL THE FESTIVAL ↓</div></section>
 
@@ -90,15 +66,38 @@ footer{position:relative;text-align:center;padding:65px 20px 95px;background:rad
 <button class="float-diya" id="floatDiya" title="दीप जलाएँ">🪔</button><div class="toast" id="toast">दीप जल उठा! 🪔</div>
 <script>
 
+// Original generated festive soundscape (no external audio download required).
+// Browsers may block autoplay until the visitor taps/clicks once.
+let diwaliAudio=null,diwaliMusicOn=false,diwaliNodes=[];
+function startDiwaliMusic(){
+ if(diwaliMusicOn)return;
+ const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+ diwaliAudio=diwaliAudio||new AC();diwaliAudio.resume();
+ const ctxA=diwaliAudio,master=ctxA.createGain();master.gain.value=.13;master.connect(ctxA.destination);diwaliNodes.push(master);
+ // Soft tanpura-like drone
+ [110,165,220].forEach((hz,i)=>{const o=ctxA.createOscillator(),g=ctxA.createGain();o.type='sine';o.frequency.value=hz;g.gain.value=i===0?.18:.055;o.connect(g);g.connect(master);o.start();diwaliNodes.push(o,g)});
+ // Gentle bell notes, a calm original festive melody
+ const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,783.99,659.25,523.25,587.33,659.25];
+ let idx=0;function bell(){
+   if(!diwaliMusicOn)return;
+   const now=ctxA.currentTime,f=notes[idx%notes.length];idx++;
+   const osc=ctxA.createOscillator(),gain=ctxA.createGain(),harm=ctxA.createOscillator(),hg=ctxA.createGain();
+   osc.type='sine';osc.frequency.value=f;gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.22,now+.025);gain.gain.exponentialRampToValueAtTime(.0001,now+1.6);
+   harm.type='sine';harm.frequency.value=f*2.01;hg.gain.setValueAtTime(.0001,now);hg.gain.exponentialRampToValueAtTime(.045,now+.02);hg.gain.exponentialRampToValueAtTime(.0001,now+.9);
+   osc.connect(gain);gain.connect(master);harm.connect(hg);hg.connect(master);osc.start(now);harm.start(now);osc.stop(now+1.7);harm.stop(now+1);
+   setTimeout(bell,idx%4===0?650:430);
+ }bell();diwaliMusicOn=true;document.getElementById('musicBtn').classList.add('playing');document.getElementById('musicBtn').textContent='🔊 दिवाली संगीत बंद करें';
+}
+function stopDiwaliMusic(){diwaliMusicOn=false;diwaliNodes.forEach(n=>{try{n.stop?.();n.disconnect?.()}catch(e){}});diwaliNodes=[];if(diwaliAudio){diwaliAudio.close().catch(()=>{});diwaliAudio=null}const b=document.getElementById('musicBtn');b.classList.remove('playing');b.textContent='🎵 दिवाली संगीत चालू करें'}
+document.getElementById('musicBtn').addEventListener('click',()=>diwaliMusicOn?stopDiwaliMusic():startDiwaliMusic());
+// Attempt autoplay on load; if browser policy blocks it, first page interaction starts sound.
+window.addEventListener('load',()=>{try{startDiwaliMusic()}catch(e){}});
+document.addEventListener('pointerdown',()=>{if(!diwaliMusicOn)try{startDiwaliMusic()}catch(e){}},{once:true});
+
 // Scroll reveal and floating diya ambience
 const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
 for(let i=0;i<5;i++){const lamp=document.createElement('div');lamp.className='floating-lamp';lamp.textContent='🪔';lamp.style.left=(8+Math.random()*84)+'%';lamp.style.animationDelay=(Math.random()*9)+'s';lamp.style.animationDuration=(8+Math.random()*6)+'s';lamp.style.fontSize=(16+Math.random()*18)+'px';document.body.appendChild(lamp)}
-\n// Auto fade from branded greeting-call intro to the Diwali website (no buttons required)
-// Reliable intro exit: don't wait for all remote images to finish loading.
-function dismissIntro(){const intro=document.getElementById('call-intro');if(intro&&!intro.classList.contains('hide'))intro.classList.add('hide')}
-document.addEventListener('DOMContentLoaded',()=>{setTimeout(dismissIntro,3500);const intro=document.getElementById('call-intro');if(intro)intro.addEventListener('click',dismissIntro);const skip=document.getElementById('introSkip');if(skip)skip.addEventListener('click',e=>{e.stopPropagation();dismissIntro()})});
-setTimeout(dismissIntro,6000);
-const star=document.getElementById('stars'),sctx=star.getContext('2d');let sw,sh,stars=[];function size(){sw=star.width=innerWidth;sh=star.height=innerHeight;stars=Array.from({length:100},()=>({x:Math.random()*sw,y:Math.random()*sh,r:Math.random()*1.5+.2,a:Math.random(),v:Math.random()*.015+.003}))}size();addEventListener('resize',size);function twinkle(){sctx.clearRect(0,0,sw,sh);stars.forEach(p=>{p.a+=p.v;if(p.a>1||p.a<0)p.v*=-1;sctx.globalAlpha=Math.max(.1,p.a);sctx.fillStyle='#ffe8a5';sctx.beginPath();sctx.arc(p.x,p.y,p.r,0,Math.PI*2);sctx.fill()});sctx.globalAlpha=1;requestAnimationFrame(twinkle)}twinkle();
+\nconst star=document.getElementById('stars'),sctx=star.getContext('2d');let sw,sh,stars=[];function size(){sw=star.width=innerWidth;sh=star.height=innerHeight;stars=Array.from({length:100},()=>({x:Math.random()*sw,y:Math.random()*sh,r:Math.random()*1.5+.2,a:Math.random(),v:Math.random()*.015+.003}))}size();addEventListener('resize',size);function twinkle(){sctx.clearRect(0,0,sw,sh);stars.forEach(p=>{p.a+=p.v;if(p.a>1||p.a<0)p.v*=-1;sctx.globalAlpha=Math.max(.1,p.a);sctx.fillStyle='#ffe8a5';sctx.beginPath();sctx.arc(p.x,p.y,p.r,0,Math.PI*2);sctx.fill()});sctx.globalAlpha=1;requestAnimationFrame(twinkle)}twinkle();
 const c=document.getElementById('fire'),ctx=c.getContext('2d');let cw,ch,parts=[];function resizeFire(){cw=c.width=innerWidth;ch=c.height=innerHeight}resizeFire();addEventListener('resize',resizeFire);function burst(x=Math.random()*cw,y=Math.random()*ch*.55){let cols=['#ffdd75','#ffb02e','#fff0b3','#fff','#ff7b00','#ffd36a'];for(let i=0;i<80;i++){let a=Math.random()*6.283,s=Math.random()*4+1;parts.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:55+Math.random()*35,col:cols[Math.floor(Math.random()*cols.length)]})}}function draw(){ctx.clearRect(0,0,cw,ch);parts=parts.filter(p=>p.life>0);parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.025;p.life--;ctx.globalAlpha=p.life/90;ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(p.x,p.y,2,0,Math.PI*2);ctx.fill()});ctx.globalAlpha=1;requestAnimationFrame(draw)}draw();setInterval(()=>{if(Math.random()<.5)burst()},2300);
 function toast(t){let el=document.getElementById('toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2200)}
 function fireworks(){for(let i=0;i<5;i++)setTimeout(()=>burst(Math.random()*cw,Math.random()*ch*.55),i*180)}
