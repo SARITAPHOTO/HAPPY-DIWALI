@@ -45,8 +45,29 @@ footer{position:relative;text-align:center;padding:65px 20px 95px;background:rad
 
 /* Diwali sound toggle */
 #musicBtn{position:fixed;left:18px;bottom:18px;z-index:50;border:1px solid #ffdf8b;background:linear-gradient(135deg,#6b2400,#351000);color:#ffe6a4;border-radius:50px;padding:12px 17px;font:600 13px Arial;box-shadow:0 0 24px #ffb52b33;cursor:pointer;backdrop-filter:blur(8px)}#musicBtn.playing{background:linear-gradient(135deg,#ffc95b,#f08a18);color:#421300}
+
+/* Diya lighting opening animation */
+#diya-intro{position:fixed;inset:0;z-index:9998;display:grid;place-items:center;text-align:center;background:radial-gradient(ellipse at 50% 65%,#7c2b00 0%,#3c1000 42%,#180400 100%);color:#ffe7ad;transition:opacity 1.2s,visibility 1.2s;overflow:hidden}
+#diya-intro:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 58%,#ffb52b22,transparent 35%);animation:diyaGlow 3s ease-in-out infinite alternate}
+.diya-opening{position:relative;width:min(90vw,520px);padding:30px 18px;z-index:1}.opening-brand{font:700 12px Arial;letter-spacing:5px;color:#f5d18a;opacity:0;animation:openingText 1s 1.3s forwards}.opening-diya{height:190px;position:relative;margin:28px auto 18px;width:250px}
+.diya-bowl{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);width:210px;height:78px;border-radius:12px 12px 105px 105px;background:linear-gradient(180deg,#ffce6a,#b94c08 48%,#5b1b00);border:2px solid #ffd878;box-shadow:inset 0 8px 12px #fff4a655,0 14px 35px #0008}
+.diya-bowl:before{content:"";position:absolute;top:-8px;left:4px;right:4px;height:17px;border-radius:50%;background:linear-gradient(#ffe6a0,#d86b12);border:1px solid #ffdf8b}
+.diya-wick{position:absolute;bottom:76px;left:50%;width:5px;height:34px;background:#f4d6a0;border-radius:5px;transform:translateX(-50%) rotate(8deg);z-index:2}
+.diya-flame{position:absolute;bottom:103px;left:50%;width:36px;height:58px;transform:translateX(-50%) scale(.05);opacity:0;transform-origin:bottom;background:radial-gradient(ellipse at 50% 72%,#fff8b5 0 18%,#ffe56b 32%,#ff9b19 60%,#ff4b00 78%,transparent 80%);border-radius:50% 50% 48% 48%;filter:drop-shadow(0 0 18px #ffb52b);z-index:3}
+#diya-intro.lit .diya-flame{animation:flameIgnite .8s 2s forwards,flameDance .65s 2.8s infinite alternate}
+#diya-intro.lit .diya-bowl{box-shadow:inset 0 8px 12px #fff4a655,0 0 50px #ff9c2b55,0 14px 35px #0008}
+.opening-wish{font:700 clamp(22px,5.5vw,34px)/1.8 'Noto Serif Devanagari',serif;opacity:0;transform:translateY(15px);color:#fff0c6;text-shadow:0 0 20px #ffae2b55}
+#diya-intro.lit .opening-wish{animation:openingText 1s 2.8s forwards}
+.opening-from{font:600 14px Arial;letter-spacing:2px;color:#ffd16c;margin-top:12px;opacity:0}#diya-intro.lit .opening-from{animation:openingText 1s 3.6s forwards}
+#diyaSkip{margin-top:22px;opacity:0;animation:openingText .8s 4.2s forwards}
+#diya-intro.hide{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes flameIgnite{0%{opacity:0;transform:translateX(-50%) scale(.05)}50%{opacity:1;transform:translateX(-50%) scale(1.18)}100%{opacity:1;transform:translateX(-50%) scale(1)}}
+@keyframes flameDance{from{transform:translateX(-50%) rotate(-4deg) scale(1);filter:drop-shadow(0 0 15px #ffb52b)}to{transform:translateX(-50%) rotate(4deg) scale(1.08,.94);filter:drop-shadow(0 0 28px #ffd45a)}}
+@keyframes openingText{to{opacity:1;transform:none}}
+@keyframes diyaGlow{to{opacity:.75;transform:scale(1.12)}}
+@media(prefers-reduced-motion:reduce){#diya-intro *{animation-duration:.01ms!important;animation-delay:0s!important}}
 </style></head><body>
-<button id="musicBtn" aria-label="Diwali music toggle">🎵 दिवाली संगीत चालू करें</button><div id="progress"></div><canvas id="stars"></canvas><canvas id="fire"></canvas>
+<div id="diya-intro" aria-label="Diwali diya lighting animation"><div class="diya-opening"><div class="opening-brand">SARITA PHOTO • SINCE 1985</div><div class="opening-diya"><div class="diya-wick"></div><div class="diya-flame"></div><div class="diya-bowl"></div></div><div class="opening-wish">आपको और आपके परिवार को<br>दीपावली की हार्दिक शुभकामनाएँ</div><div class="opening-from">SARITA PHOTO की तरफ़ से ❤️</div><button id="diyaSkip" class="btn">वेबसाइट देखें ✨</button></div></div><button id="musicBtn" aria-label="Diwali music toggle">🎵 दिवाली संगीत चालू करें</button><div id="progress"></div><canvas id="stars"></canvas><canvas id="fire"></canvas>
 <header class="nav"><span>SARITA PHOTO</span><a href="#wishes">शुभकामनाएँ ✨</a></header>
 <section class="hero"><div class="hero-inner"><div class="brand">SARITA PHOTO • SINCE 1985</div><div class="tiny">॥ शुभ दीपावली ॥</div><h1>HAPPY<span>दीपावली</span></h1><div class="goldline"></div><p>दीपों की पावन जगमगाहट आपके जीवन से हर अंधकार दूर करे। प्रभु श्रीराम की कृपा, माँ लक्ष्मी का आशीर्वाद और अपनों का प्रेम आपके घर-आँगन को सुख, शांति, स्वास्थ्य, समृद्धि और खुशियों से भर दे।<br>आपके परिवार में सदैव प्रेम, एकता और मंगल बना रहे।</p><div class="diyas"><span>🪔</span><span>🪔</span><span>🪔</span></div><button class="btn" onclick="document.getElementById('ram').scrollIntoView({behavior:'smooth'})">✨ दिवाली की कहानी देखें</button></div><div class="scroll">SCROLL TO FEEL THE FESTIVAL ↓</div></section>
 
@@ -64,6 +85,27 @@ footer{position:relative;text-align:center;padding:65px 20px 95px;background:rad
 <footer><div class="diyas"><span>🪔</span><span>✨</span><span>🪔</span></div><h2>शुभ दीपावली</h2><p>आपका जीवन खुशियों, प्रेम, स्वास्थ्य और समृद्धि से जगमगाता रहे।<br>प्रभु श्रीराम और माँ लक्ष्मी का आशीर्वाद आप पर बना रहे।</p><div class="signature">SARITA PHOTO</div><p>Creating Timeless Memories • Since 1985</p><p>स्नेह एवं शुभकामनाओं सहित ❤️</p></footer>
 <button class="float-diya" id="floatDiya" title="दीप जलाएँ">🪔</button><div class="toast" id="toast">दीप जल उठा! 🪔</div>
 <script>
+
+// Opening diya animation + Hindi greeting voiceover
+let greetingSpoken=false;
+function speakDiwaliGreeting(){
+ if(greetingSpoken)return;greetingSpoken=true;
+ if(!('speechSynthesis' in window)){return}
+ try{speechSynthesis.cancel();const msg=new SpeechSynthesisUtterance('आपको और आपके परिवार को दीपावली की हार्दिक शुभकामनाएँ। सरिता फोटो की तरफ से।');msg.lang='hi-IN';msg.rate=.82;msg.pitch=1.02;msg.volume=1;
+ const voices=speechSynthesis.getVoices();const hindi=voices.find(v=>v.lang.toLowerCase().startsWith('hi'));if(hindi)msg.voice=hindi;
+ msg.onend=()=>setTimeout(hideDiyaIntro,900);msg.onerror=()=>setTimeout(hideDiyaIntro,700);speechSynthesis.speak(msg);
+ }catch(e){setTimeout(hideDiyaIntro,6500)}
+}
+function hideDiyaIntro(){const el=document.getElementById('diya-intro');if(el)el.classList.add('hide')}
+document.addEventListener('DOMContentLoaded',()=>{
+ const intro=document.getElementById('diya-intro');if(!intro)return;
+ setTimeout(()=>intro.classList.add('lit'),2000);
+ setTimeout(speakDiwaliGreeting,2800);
+ document.getElementById('diyaSkip').addEventListener('click',()=>{hideDiyaIntro();if(!greetingSpoken){try{speakDiwaliGreeting()}catch(e){}}});
+ // Browser blocks speech autoplay in many cases; a first touch/click enables it.
+ document.addEventListener('pointerdown',()=>{if(!greetingSpoken&&intro&&!intro.classList.contains('hide'))speakDiwaliGreeting()},{once:true});
+ setTimeout(()=>{if(!greetingSpoken)hideDiyaIntro()},12000);
+});
 
 // Original generated festive soundscape (no external audio download required).
 // Browsers may block autoplay until the visitor taps/clicks once.
