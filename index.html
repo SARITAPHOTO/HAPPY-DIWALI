@@ -116,10 +116,22 @@ footer p{color:#e8d5c3;line-height:1.9}
 @keyframes petalFall{0%{background-position:10% -20%,70% -30%}100%{background-position:30% 130%,50% 140%}}
 @media(max-width:700px){.darshan-grid{grid-template-columns:1fr}.darshan-visual{height:280px}.darshan-info p{min-height:0}}
 
+
+/* SARITA PHOTO polish: warm glass navigation, clearer motion, mobile touch feedback */
+.topbar{position:absolute;backdrop-filter:blur(7px);background:linear-gradient(180deg,#16050070,transparent)}
+.hero-content{animation:rise 1.25s both}
+.hero h1{background:linear-gradient(180deg,#fff8d9 0%,#ffe4a0 42%,#ffb52e 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 12px 28px #0008;filter:drop-shadow(0 0 18px #ffae3c55)}
+.cta,.tile,.float-diya{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.cta:focus-visible,.tile:focus-visible,.topbar a:focus-visible{outline:3px solid #fff1b8;outline-offset:4px}
+.section{scroll-margin-top:18px}
+.image-frame,.puja-card,.darshan-card,.wishbox{backdrop-filter:blur(8px)}
+.puja-card img{transition:transform .7s ease}.puja-card:hover img{transform:scale(1.025)}
+.hero-actions .cta:first-child{animation:softGlow 3s ease-in-out infinite}
+@keyframes softGlow{50%{box-shadow:0 0 45px #ffae3c88,0 0 90px #ffae3c22}}
+@media(max-width:520px){.logo{letter-spacing:2px}.logo small{letter-spacing:1px;font-size:8px}.topbar a{padding:9px 12px;font-size:12px}.hero h1{font-size:clamp(45px,14vw,72px)}.hero h1 span{font-size:clamp(34px,10vw,58px)}.hero-copy{line-height:1.85}.hero-actions{display:grid;max-width:310px;margin:25px auto 0}.hero-actions .cta{width:100%}.float-diya{right:12px;bottom:12px}}
 </style>
 </head>
 <body>
-<div id="intro"><div class="intro-ring"></div><div class="intro-content"><div class="eyebrow">एक दिव्य • भव्य • यादगार दीपावली अनुभव</div><div class="intro-icon">🪔</div><h1>SARITA PHOTO</h1><p>CREATING TIMELESS MEMORIES • SINCE 1985</p><div style="color:#fff0d0;font-size:22px;line-height:1.9;margin-top:25px">दीवाली री राम-राम सा!<br><span style="color:#eac17b">शुभ दीपावली</span></div></div></div>
 <div id="progress"></div><canvas id="stars"></canvas><canvas id="fireworks"></canvas>
 <header class="topbar"><div class="logo">SARITA PHOTO<small>CREATING TIMELESS MEMORIES • SINCE 1985</small></div><a href="#wishes">शुभकामनाएँ ✨</a></header>
 <main>
@@ -161,7 +173,7 @@ footer p{color:#e8d5c3;line-height:1.9}
 <footer><div style="font-size:32px">🪔 ✨ 🪔</div><h2>शुभ दीपावली</h2><p>आपका जीवन खुशियों, प्रेम, स्वास्थ्य और समृद्धि से जगमगाता रहे।<br>प्रभु श्रीराम और माँ लक्ष्मी का आशीर्वाद आप पर बना रहे।</p><div class="signature">SARITA PHOTO</div><p>Creating Timeless Memories • Since 1985</p><p>स्नेह एवं शुभकामनाओं सहित ❤️</p></footer>
 <button class="float-diya" id="floatDiya" title="दीप जलाएँ">🪔</button><div class="toast" id="toast">दीप जल उठा! 🪔</div>
 <script>
-addEventListener('load',()=>setTimeout(()=>document.getElementById('intro').classList.add('hide'),3600));
+
 const star=document.getElementById('stars'),sctx=star.getContext('2d');let sw,sh,stars=[];
 function size(){sw=star.width=innerWidth;sh=star.height=innerHeight;stars=Array.from({length:110},()=>({x:Math.random()*sw,y:Math.random()*sh,r:Math.random()*1.5+.2,a:Math.random(),v:Math.random()*.012+.003}))}
 size();addEventListener('resize',size);
